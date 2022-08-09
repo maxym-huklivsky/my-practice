@@ -1,0 +1,69 @@
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eos, mollitia obcaecati iste velit itaque, facilis,
+		consequuntur quasi sint accusantium id modi error! Eveniet facilis quidem maxime temporibus illum, deleniti natus
+		ut libero? Repudiandae culpa deleniti voluptatum labore iusto ipsam numquam nemo quae dicta, voluptas, nostrum
+		unde ut explicabo modi.</p>
+	<input class="input" type="checkbox" id="input">
+	<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, repellat earum architecto ad aut sit
+		adipisci cumque
+		delectus. Voluptatem magni voluptate a quaerat magnam saepe quas reiciendis ex cupiditate nesciunt?</p>
+	<span class="points">...</span>
+	<label class="label" for="input">
+		<div class="button">
+			<span class="show">Показать</span><span class="hidden">Скрыть</span>&nbsp;абзац
+		</div>
+	</label>
+
+	<!-- CSS -->
+	body {
+	padding: 0 15px;
+}
+
+.button {
+	width: 150px;
+	height: 60px;
+	background-color: #ccc;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+
+.input {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
+
+.input:checked+.text {
+	display: none;
+}
+
+.points {
+	display: none;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.input:checked~.points {
+	display: block;
+}
+
+.show {
+	display: none;
+}
+
+.input:checked~.label .hidden {
+	display: none;
+}
+
+.input:checked~.label .show {
+	display: block;
+}
